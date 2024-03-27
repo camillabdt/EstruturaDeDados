@@ -27,7 +27,6 @@ public class PontoCartesiano {
         this.y = y;
     }
 
-    // Método para calcular a distância euclidiana entre dois pontos
     public double calcularDistanciaEuclidiana(PontoCartesiano outroPonto) {
         double distancia = Math.sqrt(Math.pow((outroPonto.getX() - this.x), 2) + Math.pow((outroPonto.getY() - this.y), 2));
         return distancia;
