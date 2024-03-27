@@ -1,16 +1,15 @@
+import java.util.Scanner;
 import java.lang.Math;
 
 public class PontoCartesiano {
     private double x;
     private double y;
 
-    // Construtor
     public PontoCartesiano(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    // Getters e Setters
     public double getX() {
         return x;
     }
@@ -33,9 +32,19 @@ public class PontoCartesiano {
     }
 
     public static void main(String[] args) {
-        // Testando o TAD em uma classe Main
-        PontoCartesiano ponto1 = new PontoCartesiano(1, 2);
-        PontoCartesiano ponto2 = new PontoCartesiano(4, 6);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite as coordenadas do ponto 1 (x y):");
+        double x1 = scanner.nextDouble();
+        double y1 = scanner.nextDouble();
+        PontoCartesiano ponto1 = new PontoCartesiano(x1, y1);
+
+        System.out.println("Digite as coordenadas do ponto 2 (x y):");
+        double x2 = scanner.nextDouble();
+        double y2 = scanner.nextDouble();
+        PontoCartesiano ponto2 = new PontoCartesiano(x2, y2);
+
+        scanner.close();
 
         System.out.println("Coordenadas do ponto 1: (" + ponto1.getX() + ", " + ponto1.getY() + ")");
         System.out.println("Coordenadas do ponto 2: (" + ponto2.getX() + ", " + ponto2.getY() + ")");
