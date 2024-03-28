@@ -37,19 +37,19 @@ public class PontoCartesiano {
         System.out.println("Digite as coordenadas do ponto 1 (x y):");
         double x1 = scanner.nextDouble();
         double y1 = scanner.nextDouble();
-        PontoCartesiano ponto1 = new PontoCartesiano(x1, y1);
+        PontoCartesiano pontoUm = new PontoCartesiano(x1, y1);
 
         System.out.println("Digite as coordenadas do ponto 2 (x y):");
         double x2 = scanner.nextDouble();
         double y2 = scanner.nextDouble();
-        PontoCartesiano ponto2 = new PontoCartesiano(x2, y2);
+        PontoCartesiano pontoDois = new PontoCartesiano(x2, y2);
 
         scanner.close();
 
-        System.out.println("Coordenadas do ponto 1: (" + ponto1.getX() + ", " + ponto1.getY() + ")");
-        System.out.println("Coordenadas do ponto 2: (" + ponto2.getX() + ", " + ponto2.getY() + ")");
+        System.out.println("Coordenadas do ponto 1: (" + pontoUm.getX() + ", " + pontoUm.getY() + ")");
+        System.out.println("Coordenadas do ponto 2: (" + pontoDois.getX() + ", " + pontoDois.getY() + ")");
 
-        double distancia = ponto1.calcularDistanciaEuclidiana(ponto2);
+        double distancia = pontoUm.calcularDistanciaEuclidiana(pontoDois);
         System.out.println("Distância euclidiana entre os pontos: " + distancia);
     }
 }
