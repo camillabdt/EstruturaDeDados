@@ -1,12 +1,13 @@
 import java.util.Random;
 
-public class Vetor {
+public class Vetor2 implements IVetor {
     private int[] elementos;
 
     public Vetor(int tamanho) {
         elementos = new int[tamanho];
     }
 
+    @Override
     public void preencherAleatoriamente() {
         Random rand = new Random();
         for (int i = 0; i < elementos.length; i++) {
@@ -14,17 +15,19 @@ public class Vetor {
         }
     }
 
-    public int maiorElementoRecursivo(int inicio, int fim) {
+    // Método adaptado para seguir a pseudolinguagem fornecida
+    public int maximoRec(int inicio, int fim) {
         if (inicio == fim) {
-            return elementos[inicio];
+            return elementos[inicio];  // Caso base: o segmento tem apenas um elemento
         } else {
             int meio = (inicio + fim) / 2;
-            int maiorEsquerda = maiorElementoRecursivo(inicio, meio);
-            int maiorDireita = maiorElementoRecursivo(meio + 1, fim);
-            return Math.max(maiorEsquerda, maiorDireita);
+            int max1 = maximoRec(inicio, meio);  // Recursão na metade esquerda
+            int max2 = maximoRec(meio + 1, fim);  // Recursão na metade direita
+            return Math.max(max1, max2);  // Retorna o maior entre os dois máximos encontrados
         }
     }
 
+    @Override
     public int maiorElementoIterativo() {
         int maior = elementos[0];
         for (int i = 1; i < elementos.length; i++) {
@@ -33,9 +36,5 @@ public class Vetor {
             }
         }
         return maior;
-    }
-
-    public int[] getElementos() {
-        return elementos;
     }
 }
