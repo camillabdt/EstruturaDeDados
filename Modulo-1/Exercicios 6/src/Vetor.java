@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Vetor2 implements IVetor {
+public class Vetor implements IVetor {
     private int[] elementos;
 
     public Vetor(int tamanho) {
@@ -14,17 +14,19 @@ public class Vetor2 implements IVetor {
             elementos[i] = rand.nextInt(1000) + 1;  // Números de 1 a 1000
         }
     }
-
-    // Método adaptado para seguir a pseudolinguagem fornecida
     public int maximoRec(int inicio, int fim) {
         if (inicio == fim) {
-            return elementos[inicio];  // Caso base: o segmento tem apenas um elemento
+            return elementos[inicio];
         } else {
             int meio = (inicio + fim) / 2;
-            int max1 = maximoRec(inicio, meio);  // Recursão na metade esquerda
-            int max2 = maximoRec(meio + 1, fim);  // Recursão na metade direita
-            return Math.max(max1, max2);  // Retorna o maior entre os dois máximos encontrados
+            int max1 = maximoRec(inicio, meio);
+            int max2 = maximoRec(meio + 1, fim);
+            return Math.max(max1, max2);
         }
+    }
+
+    public int maximoRec() {
+        return maximoRec(0, elementos.length - 1);
     }
 
     @Override
