@@ -1,0 +1,133 @@
+Index: Modulo-1/Exercicios 8/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Modulo-1/Exercicios 8/Main.java b/Modulo-1/Exercicios 8/Main.java
+new file mode 100644
+--- /dev/null	(date 1717585888001)
++++ b/Modulo-1/Exercicios 8/Main.java	(date 1717585888001)
+@@ -0,0 +1,37 @@
++import java.util.Random;
++
++public class Main {
++
++    public static void main(String[] args) {
++        int[] array = new int[1000];
++        Random rand = new Random();
++
++        // Gerando o vetor com 1000 elementos aleatórios
++        for (int i = 0; i < array.length; i++) {
++            array[i] = rand.nextInt(10000);
++        }
++
++        // Copiando o vetor para garantir que os três métodos utilizem os mesmos dados
++        int[] arrayParaBolha = array.clone();
++        int[] arrayParaSelecao = array.clone();
++        int[] arrayParaInsercao = array.clone();
++
++        // Ordenação usando Bubble Sort e medindo o tempo de execução
++        long tempoInicial = System.nanoTime();
++        OrdenacaoBolha.ordenacaoBolha(arrayParaBolha);
++        long tempoFinal = System.nanoTime();
++        System.out.println("Ordenação Bolha levou " + (tempoFinal - tempoInicial) + " nanosegundos");
++
++        // Ordenação usando Selection Sort e medindo o tempo de execução
++        tempoInicial = System.nanoTime();
++        OrdenacaoSelecao.ordenacaoSelecao(arrayParaSelecao);
++        tempoFinal = System.nanoTime();
++        System.out.println("Ordenação Seleção levou " + (tempoFinal - tempoInicial) + " nanosegundos");
++
++        // Ordenação usando Insertion Sort e medindo o tempo de execução
++        tempoInicial = System.nanoTime();
++        OrdenacaoInsercao.ordenacaoInsercao(arrayParaInsercao);
++        tempoFinal = System.nanoTime();
++        System.out.println("Ordenação Inserção levou " + (tempoFinal - tempoInicial) + " nanosegundos");
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f596698c-badb-40e7-bf4a-6ff27ba1f215\" name=\"Changes\" comment=\"parte do trabalho\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/EstruturaDeDados/IVetor.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/EstruturaDeDados/Main.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/EstruturaDeDados/Main.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/EstruturaDeDados/Vetor.class\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;camillabdt&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/camillabdt/EstruturaDeDados.git&quot;,\r\n    &quot;accountId&quot;: &quot;90953cb0-3e21-44fb-804d-fee346c0a173&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2eKb64h7fKliQVe0v1oPOSSmnX3\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.Main.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Main8.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.MainOficial.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.MainVetor.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Modulo-1/Exercicios 7&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\kamyq\\IdeaProjects\\EstruturaDeDados\\Modulo-1\\Exercicios 8\" />\r\n      <recent name=\"C:\\Users\\kamyq\\IdeaProjects\\EstruturaDeDados\\Modulo-1\\Exercicios 1\\src\" />\r\n      <recent name=\"C:\\Users\\kamyq\\IdeaProjects\\EstruturaDeDados\\Modulo-1\\Exercicios 7\" />\r\n      <recent name=\"C:\\Users\\kamyq\\IdeaProjects\\EstruturaDeDados\\Modulo-1\" />\r\n      <recent name=\"C:\\Users\\kamyq\\IdeaProjects\\EstruturaDeDados\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150\" />\r\n        <option value=\"bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f596698c-badb-40e7-bf4a-6ff27ba1f215\" name=\"Changes\" comment=\"\" />\r\n      <created>1711656038773</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1711656038773</updated>\r\n      <workItem from=\"1711656040952\" duration=\"37000\" />\r\n      <workItem from=\"1716420691960\" duration=\"434000\" />\r\n      <workItem from=\"1716421321850\" duration=\"622000\" />\r\n      <workItem from=\"1716465081171\" duration=\"582000\" />\r\n      <workItem from=\"1716465691479\" duration=\"4212000\" />\r\n      <workItem from=\"1716516139990\" duration=\"130000\" />\r\n      <workItem from=\"1716596765182\" duration=\"68000\" />\r\n      <workItem from=\"1717523730247\" duration=\"852000\" />\r\n      <workItem from=\"1717584850357\" duration=\"206000\" />\r\n      <workItem from=\"1717585233180\" duration=\"77000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"parte do trabalho\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716465566330</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716465566330</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"parte do trabalho\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"parte do trabalho\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 589770083fe8135a0bdc6d48ed8b38401d781a4a)
++++ b/.idea/workspace.xml	(date 1717585888012)
+@@ -4,12 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="parte do trabalho">
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="trabalho 8">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeDados/IVetor.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeDados/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EstruturaDeDados/Main.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeDados/Vetor.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Modulo-1/Exercicios 1/vetorAlunos.java" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -102,6 +99,8 @@
+       <workItem from="1717523730247" duration="852000" />
+       <workItem from="1717584850357" duration="206000" />
+       <workItem from="1717585233180" duration="77000" />
++      <workItem from="1717585322516" duration="196000" />
++      <workItem from="1717585537456" duration="195000" />
+     </task>
+     <task id="LOCAL-00001" summary="parte do trabalho">
+       <option name="closed" value="true" />
+@@ -111,7 +110,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1716465566330</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="trabalho 8">
++      <option name="closed" value="true" />
++      <created>1717585337009</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1717585337009</updated>
++    </task>
++    <task id="LOCAL-00003" summary="trabalho 8">
++      <option name="closed" value="true" />
++      <created>1717585416699</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1717585416699</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -130,6 +145,22 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="parte do trabalho" />
+-    <option name="LAST_COMMIT_MESSAGE" value="parte do trabalho" />
++    <MESSAGE value="trabalho 8" />
++    <option name="LAST_COMMIT_MESSAGE" value="trabalho 8" />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" type="java-method">
++          <url>file://$PROJECT_DIR$/Modulo-1/Exercicios 8/OrdenacaoSelecao.class</url>
++          <line>6</line>
++          <properties class="OrdenacaoSelecao" method="&lt;init&gt;">
++            <option name="EMULATED" value="true" />
++            <option name="WATCH_EXIT" value="false" />
++          </properties>
++          <option name="timeStamp" value="1" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
+   </component>
+ </project>
+\ No newline at end of file
+diff --git a/Modulo-1/Exercicios 1/vetorAlunos.java b/Modulo-1/Exercicios 1/vetorAlunos.java
+deleted file mode 100644
