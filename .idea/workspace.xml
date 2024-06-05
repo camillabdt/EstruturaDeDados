@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="parte do trabalho">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeDados/IVetor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeDados/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EstruturaDeDados/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EstruturaDeDados/Vetor.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,31 +47,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.MainVetor.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Modulo-1/Exercicios 7",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main8.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainOficial.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainVetor.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Modulo-1/Exercicios 7&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1" />
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 8" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 1\src" />
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 7" />
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados" />
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 6" />
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Trabalho\.idea" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -93,6 +99,9 @@
       <workItem from="1716465691479" duration="4212000" />
       <workItem from="1716516139990" duration="130000" />
       <workItem from="1716596765182" duration="68000" />
+      <workItem from="1717523730247" duration="852000" />
+      <workItem from="1717584850357" duration="206000" />
+      <workItem from="1717585233180" duration="77000" />
     </task>
     <task id="LOCAL-00001" summary="parte do trabalho">
       <option name="closed" value="true" />
