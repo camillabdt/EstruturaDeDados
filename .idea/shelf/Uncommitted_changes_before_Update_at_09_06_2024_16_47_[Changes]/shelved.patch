@@ -1,0 +1,1569 @@
+Index: Trabalhoavaliativo2/E2/E2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E2/E2.iml b/Trabalhoavaliativo2/E2/E2.iml
+new file mode 100644
+--- /dev/null	(date 1717906808865)
++++ b/Trabalhoavaliativo2/E2/E2.iml	(date 1717906808865)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E3/src/LDE.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E3/src/LDE.java b/Trabalhoavaliativo2/E3/src/LDE.java
+new file mode 100644
+--- /dev/null	(date 1717943403799)
++++ b/Trabalhoavaliativo2/E3/src/LDE.java	(date 1717943403799)
+@@ -0,0 +1,128 @@
++public class LDE {
++    private Noh inicio;
++    private Noh fim;
++
++    public LDE(){
++        this.inicio = null;
++        this.fim = null;
++    }
++
++    public void insereInicio(int info) {
++        Noh novo = new Noh(info);
++
++        if (inicio == null){
++            inicio = novo;
++            fim = novo;
++        }else {
++            novo.setProximo(inicio);
++            inicio.setAnterior(novo);
++            inicio = novo;
++        }
++
++    }
++
++    public void insereFim(int info) {
++        Noh novo = new Noh(info);
++
++        if (fim == null){
++            inicio = novo;
++            fim = novo;
++        }else {
++            novo.setAnterior(fim);
++            fim.setProximo(novo);
++            fim = novo;
++
++        }
++    }
++
++    public boolean remove(int info) {
++        Noh p = inicio;
++        while (p!=null && p.getInfo() != info)
++            p = p.getProximo();
++        if (p==null)
++            return false;
++
++        if (p == inicio){
++            inicio = p.getProximo();
++
++            if (inicio != null) inicio.setAnterior(null);
++            else fim = null;
++        } else if(p.getProximo() == null){
++            p.getAnterior().setProximo(null);
++            fim = p.getAnterior();
++        } else {
++            p.getAnterior().setProximo(p.getProximo());
++            p.getProximo().setAnterior(p.getAnterior());
++        }
++        return true;
++    }
++
++
++    public boolean removeContrario(int info) {
++        Noh p = fim;
++        while (p!=null && p.getInfo() != info)
++            p = p.getAnterior();
++        if (p==null)
++            return false;
++
++        if (p == fim){
++            fim = p.getAnterior();
++
++            if (fim != null) fim.setProximo(null);
++            else fim = null;
++        } else if(p.getAnterior() == null){
++            p.getProximo().setAnterior(null);
++            fim = p.getProximo();
++        } else {
++            p.getProximo().setAnterior(p.getAnterior());
++            p.getAnterior().setProximo(p.getProximo());
++        }
++        return true;
++    }
++
++    public boolean estaVazia() {
++        return inicio == null;
++    }
++
++    public int tamanho() {
++        int tamanho = 0;
++
++        for(Noh i = inicio; i != null; i = i.getProximo()) {
++            tamanho++;
++        }
++
++        return tamanho;
++    }
++
++    public String imprimeListaInicio() {
++
++        String lista = "";
++
++        for(Noh i = inicio; i != null; i = i.getProximo()) {
++            lista += i.getInfo() + " ";
++        }
++
++        return lista;
++    }
++
++    public String imprimeListaFim() {
++
++        String lista = "";
++
++        for(Noh i = fim; i != null; i = i.getAnterior()) {
++            lista += i.getInfo() + " ";
++        }
++
++        return lista;
++    }
++
++    public int nroPares(){
++        int nroPares = 0;
++        for(Noh i = inicio; i != null; i = i.getProximo()) {
++            if(i.getInfo() % 2 == 0){
++                nroPares++;
++            }
++        }
++        return nroPares;
++    }
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E4/E4.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E4/E4.iml b/Trabalhoavaliativo2/E4/E4.iml
+new file mode 100644
+--- /dev/null	(date 1717906876075)
++++ b/Trabalhoavaliativo2/E4/E4.iml	(date 1717906876075)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E4/src/LDE.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E4/src/LDE.java b/Trabalhoavaliativo2/E4/src/LDE.java
+new file mode 100644
+--- /dev/null	(date 1717943573532)
++++ b/Trabalhoavaliativo2/E4/src/LDE.java	(date 1717943573532)
+@@ -0,0 +1,96 @@
++public class LDE {
++    private Noh inicio;
++    private Noh fim;
++
++    public LDE (){
++        this.inicio = null;
++        this.fim = null;
++    }
++
++    public void insereInicio(int info) {
++        Noh novoNoh = new Noh(info);
++
++        if (inicio == null){
++            inicio = novoNoh;
++            fim = novoNoh;
++        }
++        else {
++            novoNoh.setProximo(inicio);
++            inicio.setAnterior(novoNoh);
++            inicio = novoNoh;
++        }
++    }
++
++    public void insereFim(int info) {
++        Noh novoNoh = new Noh(info);
++
++
++        if (inicio == null){
++            inicio = novoNoh;
++            fim = novoNoh;
++        }
++        else {
++            novoNoh.setAnterior(fim);
++            fim.setProximo(novoNoh);
++            fim = novoNoh;
++        }
++    }
++
++    public void imprimeListaInicio() {
++        Noh aux = inicio;
++        while (aux != null) {
++            System.out.println(aux.getInfo());
++            aux = aux.getProximo();
++        }
++    }
++
++    public void imprimeListaFim() {
++        Noh aux = fim;
++        while (aux != null) {
++            System.out.println(aux.getInfo());
++            aux = aux.getAnterior();
++        }
++    }
++
++    public int nroPares() {
++        int par = 0;
++        Noh aux = inicio;
++        while (aux != null) {
++            if (aux.getInfo() % 2 == 0) {
++                par++;
++            }
++            aux = aux.getProximo();
++        }
++        return par;
++    }
++
++    public void add_ordenado(int info) {
++
++        Noh novoNoh = new Noh(info);
++
++        if (inicio == null) {
++            inicio = novoNoh;
++            fim = novoNoh;
++        } else if (info < inicio.getInfo()) {
++            novoNoh.setProximo(inicio);
++            inicio.setAnterior(novoNoh);
++            inicio = novoNoh;
++        } else if (info > fim.getInfo()) {
++            novoNoh.setAnterior(fim);
++            fim.setProximo(novoNoh);
++            fim = novoNoh;
++        } else {
++            Noh a = inicio;
++
++            while (a != null && a.getInfo() < info) {
++                a = a.getProximo();
++            }
++
++            novoNoh.setProximo(a);
++            novoNoh.setAnterior(a.getAnterior());
++            a.getAnterior().setProximo(novoNoh);
++            a.setAnterior(novoNoh);
++        }
++    }
++
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E3/src/Noh.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E3/src/Noh.java b/Trabalhoavaliativo2/E3/src/Noh.java
+new file mode 100644
+--- /dev/null	(date 1717943403793)
++++ b/Trabalhoavaliativo2/E3/src/Noh.java	(date 1717943403793)
+@@ -0,0 +1,19 @@
++public class Noh {
++
++    private int info;
++    private Noh proximo;
++    private Noh anterior;
++
++    public Noh (int info){
++        this.info = info;
++        this.proximo = null;
++        this.anterior = null;
++    }
++
++    public int getInfo() {return info;}
++    public Noh getProximo() {return proximo;}
++    public Noh getAnterior() {return anterior;}
++
++    public void setProximo(Noh n) {this.proximo = n;}
++    public void setAnterior(Noh n){this.anterior = n;}
++}
+\ No newline at end of file
+Index: Modulo-1/Exercicios 8/estruturadedados.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Modulo-1/Exercicios 8/estruturadedados.iml b/Modulo-1/Exercicios 8/estruturadedados.iml
+new file mode 100644
+--- /dev/null	(date 1711655669282)
++++ b/Modulo-1/Exercicios 8/estruturadedados.iml	(date 1711655669282)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E5/src/Noh.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E5/src/Noh.java b/Trabalhoavaliativo2/E5/src/Noh.java
+new file mode 100644
+--- /dev/null	(date 1717943786036)
++++ b/Trabalhoavaliativo2/E5/src/Noh.java	(date 1717943786036)
+@@ -0,0 +1,14 @@
++public class Noh {
++
++    private Object info;
++    private Noh proximo;
++
++    public Noh (Object info){
++        this.info = info;
++        this.proximo = null;
++    }
++
++    public Object getInfo() {return this.info;}
++    public Noh getProximo() {return this.proximo;}
++    public Noh setProximo(Noh n) { return this.proximo = n; }
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E4/src/Noh.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E4/src/Noh.java b/Trabalhoavaliativo2/E4/src/Noh.java
+new file mode 100644
+--- /dev/null	(date 1717943635357)
++++ b/Trabalhoavaliativo2/E4/src/Noh.java	(date 1717943635357)
+@@ -0,0 +1,19 @@
++public class Noh {
++
++    private int info;
++    private Noh proximo;
++    private Noh anterior;
++
++    public Noh (int info){
++        this.info = info;
++        this.proximo = null;
++        this.anterior = null;
++    }
++
++    public int getInfo() {return info;}
++    public Noh getProximo() {return proximo;}
++    public Noh getAnterior() {return anterior;}
++
++    public void setProximo(Noh n) {this.proximo = n;}
++    public void setAnterior(Noh n){this.anterior = n;}
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E5/E5.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E5/E5.iml b/Trabalhoavaliativo2/E5/E5.iml
+new file mode 100644
+--- /dev/null	(date 1717906884139)
++++ b/Trabalhoavaliativo2/E5/E5.iml	(date 1717906884139)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E5/src/LDE.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E5/src/LDE.java b/Trabalhoavaliativo2/E5/src/LDE.java
+new file mode 100644
+--- /dev/null	(date 1717943765680)
++++ b/Trabalhoavaliativo2/E5/src/LDE.java	(date 1717943765680)
+@@ -0,0 +1,104 @@
++public class LDE {
++    private Noh inicio;
++    private Noh novoNoh;
++
++    public LDE (){
++        this.inicio = null;
++    }
++
++    public void insereInicio(Object info) {
++        Noh novoNoh = new Noh(info);
++
++        if (inicio == null)
++            inicio = novoNoh;
++        else {
++            novoNoh.setProximo(novoNoh);
++            inicio = novoNoh;
++        }
++    }
++
++    public void insereFim(Object info) {
++        Noh novoNoh = new Noh(info);
++        Noh aux = inicio;
++
++        if (inicio == null)
++            inicio = novoNoh;
++        else {
++            while (aux.getProximo() != null)
++                aux = aux.getProximo();
++            aux.setProximo(novoNoh);
++        }
++    }
++
++    public boolean estaVazio() {
++        return inicio == null;
++    }
++
++    public boolean remove(Object info) {
++        Noh atual;
++        Noh anterior = null;
++        atual = inicio;
++
++
++        while (atual!=null && atual.getInfo() != info){
++            anterior = atual;
++            atual = atual.getProximo();
++        }
++
++        if (atual==null)
++            return false;
++        if (anterior==null)
++            inicio = atual.getProximo();
++        else
++            anterior.setProximo(novoNoh);
++
++        return true;
++    }
++
++    public int tamanho() {
++        int tamanho = 0;
++        Noh aux = inicio;
++
++        while (aux != null) {
++            tamanho++;
++            aux = aux.getProximo();
++        }
++        return tamanho;
++    }
++
++    public Object getPrimeiro() {
++        return inicio.getInfo();
++    }
++
++    public Object getUltimo() {
++        Noh aux = inicio;
++        while (aux.getProximo() != null) {
++            aux = aux.getProximo();
++        }
++        return aux.getInfo();
++    }
++
++    public void imprime() {
++        Noh aux = inicio;
++        while (aux != null) {
++            System.out.println(aux.getInfo());
++            aux = aux.getProximo();
++        }
++    }
++
++    public void imprime_rec() {
++        imprime_rec(inicio);
++    }
++
++    private void imprime_rec(Noh Noh) {
++        if (Noh == null) {
++            return;
++        }
++
++        System.out.println(Noh.getInfo());
++
++        imprime_rec(Noh.getProximo());
++    }
++
++
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E6/src/LDE.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E6/src/LDE.java b/Trabalhoavaliativo2/E6/src/LDE.java
+new file mode 100644
+--- /dev/null	(date 1717943938666)
++++ b/Trabalhoavaliativo2/E6/src/LDE.java	(date 1717943938666)
+@@ -0,0 +1,61 @@
++public class LDE {
++    private Noh inicio;
++
++
++    public LDE() {
++        this.inicio = null;
++    }
++
++    public void insereInicio(Object info) {
++        Noh novoNoh = new Noh(info);
++
++        if (inicio == null)
++            inicio = novoNoh;
++        else {
++            novoNoh.setProximo(novoNoh);
++            inicio = novoNoh;
++        }
++    }
++
++    public void insereFim(Object info) {
++        Noh novoNoh = new Noh(info);
++        Noh aux = inicio;
++
++        if (inicio == null)
++            inicio = novoNoh;
++        else {
++            while (aux.getProximo() != null)
++                aux = aux.getProximo();
++            aux.setProximo(novoNoh);
++        }
++    }
++
++
++
++    public int tamanho() {
++        int tamanho = 0;
++        Noh aux = inicio;
++
++        while (aux != null) {
++            tamanho++;
++            aux = aux.getProximo();
++        }
++        return tamanho;
++    }
++
++    public void imprimeListaInicio() {
++        Noh aux = inicio;
++        while (aux != null) {
++            System.out.println(aux.getInfo());
++            aux = aux.getProximo();
++        }
++    }
++
++    public void concat(LDE l) {
++        Noh aux = l.inicio;
++        while (aux != null) {
++            this.insereFim(aux.getInfo());
++            aux = aux.getProximo();
++        }
++    }
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E6/src/Noh.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E6/src/Noh.java b/Trabalhoavaliativo2/E6/src/Noh.java
+new file mode 100644
+--- /dev/null	(date 1717943938662)
++++ b/Trabalhoavaliativo2/E6/src/Noh.java	(date 1717943938662)
+@@ -0,0 +1,14 @@
++public class Noh {
++
++    private Object info;
++    private Noh proximo;
++
++    public Noh (Object info){
++        this.info = info;
++        this.proximo = null;
++    }
++
++    public Object getInfo() {return this.info;}
++    public Noh getProximo() {return this.proximo;}
++    public Noh setProximo(Noh n) { return this.proximo = n; }
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E7/src/Noh.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E7/src/Noh.java b/Trabalhoavaliativo2/E7/src/Noh.java
+new file mode 100644
+--- /dev/null	(date 1717944062284)
++++ b/Trabalhoavaliativo2/E7/src/Noh.java	(date 1717944062284)
+@@ -0,0 +1,16 @@
++public class Noh {
++
++    private int info;
++    private Noh proximo;
++
++    public Noh (int info){
++        this.info = info;
++        this.proximo = null;
++    }
++
++    public int getInfo() {return this.info;}
++    public Noh getProximo() {return this.proximo;}
++    public Noh setProximo(Noh n) { return this.proximo = n; }
++
++    public int setInfo(int info) {return this.info;}
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E6/E6.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E6/E6.iml b/Trabalhoavaliativo2/E6/E6.iml
+new file mode 100644
+--- /dev/null	(date 1717906890405)
++++ b/Trabalhoavaliativo2/E6/E6.iml	(date 1717906890405)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E7/src/LDE.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E7/src/LDE.java b/Trabalhoavaliativo2/E7/src/LDE.java
+new file mode 100644
+--- /dev/null	(date 1717944045141)
++++ b/Trabalhoavaliativo2/E7/src/LDE.java	(date 1717944045141)
+@@ -0,0 +1,123 @@
++public class LDE {
++    private Noh inicio;
++
++    public LDE (){
++        this.inicio = null;
++    }
++
++    public void insereInicio(int info) {
++        Noh novoNoh = new Noh(info);
++
++        if (inicio == null)
++            inicio = novoNoh;
++        else {
++            novoNoh.setProximo(inicio);
++            inicio = novoNoh;
++        }
++    }
++
++    public void insereFim(int info) {
++        Noh novoNoh = new Noh(info);
++        if (inicio == null)
++            inicio = novoNoh;
++        else {
++            Noh ultimo = null;
++            for(Noh i= inicio; i != null; i = i.getProximo()) {
++                ultimo = i;
++                ultimo.setProximo(novoNoh);
++            }
++        }
++    }
++
++    public boolean estaVazia() {
++        return inicio == null;
++    }
++
++    public boolean remove(int info) {
++        Noh atual;
++        Noh anterior = null;
++        atual = inicio;
++
++
++        while (atual!=null && atual.getInfo() != info){
++            anterior = atual;
++            atual = atual.getProximo();
++        }
++
++        if (atual==null)
++            return false;
++        if (anterior==null)
++            inicio = atual.getProximo();
++        else
++            anterior.setProximo(atual.getProximo());
++
++        return true;
++    }
++
++    public int tamanho() {
++        int tamanho = 0;
++        Noh aux = inicio;
++
++        while (aux != null) {
++            tamanho++;
++            aux = aux.getProximo();
++        }
++        return tamanho;
++    }
++
++    public int getPrimeiro() {
++        return inicio.getInfo();
++    }
++
++    public int getUltimo() {
++        Noh aux = inicio;
++        while (aux.getProximo() != null) {
++            aux = aux.getProximo();
++        }
++        return aux.getInfo();
++    }
++
++    public void imprime() {
++        Noh aux = inicio;
++        while (aux != null) {
++            System.out.println(aux.getInfo());
++            aux = aux.getProximo();
++        }
++    }
++
++
++    public void bubbleSort() {
++
++        for(Noh i = inicio; i != null; i = i.getProximo()) {
++            for(Noh j = inicio; j != null; j = j.getProximo()) {
++                if( i.getInfo() <  j.getInfo()) {
++                    int aux = i.getInfo();
++                    i.setInfo(j.getInfo());
++                    j.setInfo(aux);
++                }
++            }
++        }
++
++
++    }
++
++    public String imprimeString(){
++        String s = "";
++        Noh aux = inicio;
++        while (aux != null) {
++            s += aux.getInfo() + " ";
++            aux = aux.getProximo();
++        }
++        return s;
++    }
++
++    public void imprimeEmOrdem() {
++        Noh aux = inicio;
++
++        while (aux != null) {
++            System.out.println(aux.getInfo());
++            aux = aux.getProximo();
++        }
++    }
++
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E2/src/Vetor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E2/src/Vetor.java b/Trabalhoavaliativo2/E2/src/Vetor.java
+new file mode 100644
+--- /dev/null	(date 1717944877902)
++++ b/Trabalhoavaliativo2/E2/src/Vetor.java	(date 1717944877902)
+@@ -0,0 +1,89 @@
++import java.util.Random;
++
++public class Vetor {
++
++    Random random = new Random();
++    private int[] vetor;
++    private int total;
++
++    public Vetor(int tamanho) {
++        this.vetor = new int[tamanho];
++    }
++
++    public Vetor() {
++        vetor = new int[10];
++    }
++
++    public void adiciona(int numero) {
++        this.garanteEspaco();
++        this.vetor[total] = numero;
++        total++;
++    }
++
++    public int tamanho() {
++        return total;
++    }
++
++    public boolean contem(int numero) {
++        for (int i = 0; i < this.total; i++) {
++            if (numero == this.vetor[i]) {
++                return true;
++            }
++        }
++        return false;
++    }
++
++    public boolean cheio() {
++        return total == this.vetor.length;
++    }
++
++    private void garanteEspaco() {
++        if (this.cheio()) {
++            int[] novos = new int[this.vetor.length * 2];
++            System.arraycopy(this.vetor, 0, novos, 0, this.vetor.length);
++            this.vetor = novos;
++        }
++    }
++
++    public void gerandoAleatorio() {
++        for (int i = 0; i < vetor.length; i++) {
++            adiciona(random.nextInt(100));
++        }
++    }
++
++    public void imprime() {
++        for (int i = 0; i < total; i++) {
++            System.out.print(vetor[i] + " ");
++        }
++        System.out.println();
++    }
++
++    public String getIntersecao(Vetor vetor2) {
++        StringBuilder intersecao = new StringBuilder();
++        for (int i = 0; i < total; i++) {
++            for (int j = 0; j < vetor2.tamanho(); j++) {
++                if (vetor[i] == vetor2.vetor[j]) {
++                    intersecao.append(vetor[i]).append(" ");
++                }
++            }
++        }
++        return "Em comum: " + intersecao.toString();
++    }
++
++    public void selectionSort() {
++        for (int i = total - 1; i > 0; i--) {
++            int maxIndex = 0;
++            for (int j = 1; j <= i; j++) {
++                if (vetor[j] > vetor[maxIndex]) {
++                    maxIndex = j;
++                }
++            }
++            // Troca o maior elemento encontrado com o elemento na posição i
++            int temp = vetor[i];
++            vetor[i] = vetor[maxIndex];
++            vetor[maxIndex] = temp;
++            // Mostra o estado do vetor após a troca
++            imprime();
++        }
++    }
++}
+Index: Trabalhoavaliativo2/E7/E7.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E7/E7.iml b/Trabalhoavaliativo2/E7/E7.iml
+new file mode 100644
+--- /dev/null	(date 1717906901109)
++++ b/Trabalhoavaliativo2/E7/E7.iml	(date 1717906901109)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/EstruturaDeDados.iml\" filepath=\"$PROJECT_DIR$/EstruturaDeDados.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	(revision 7666a123ab06095159cf41a5afce1d4626277b4b)
++++ b/.idea/modules.xml	(date 1717906958259)
+@@ -2,7 +2,20 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E1/E1.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E1/E1.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E10/E10.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E10/E10.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E11/E11.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E11/E11.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E12/E12.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E12/E12.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E2/E2.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E2/E2.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E3/E3.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E3/E3.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E4/E4.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E4/E4.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E5/E5.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E5/E5.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E6/E6.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E6/E6.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E7/E7.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E7/E7.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E8/E8.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E8/E8.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/E9/E9.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/E9/E9.iml" />
+       <module fileurl="file://$PROJECT_DIR$/EstruturaDeDados.iml" filepath="$PROJECT_DIR$/EstruturaDeDados.iml" />
++      <module fileurl="file://$PROJECT_DIR$/Trabalhoavaliativo2/Trabalhoavaliativo2.iml" filepath="$PROJECT_DIR$/Trabalhoavaliativo2/Trabalhoavaliativo2.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f596698c-badb-40e7-bf4a-6ff27ba1f215\" name=\"Changes\" comment=\"trabalho 8\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Modulo-1/Exercicios 1/vetorAlunos.java\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;camillabdt&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/camillabdt/EstruturaDeDados.git&quot;,\r\n    &quot;accountId&quot;: &quot;90953cb0-3e21-44fb-804d-fee346c0a173&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2eKb64h7fKliQVe0v1oPOSSmnX3\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.Main.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Main8.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.MainOficial.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.MainVetor.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Modulo-1/Exercicios 7&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\kamyq\\IdeaProjects\\EstruturaDeDados\\Modulo-1\\Exercicios 8\" />\r\n      <recent name=\"C:\\Users\\kamyq\\IdeaProjects\\EstruturaDeDados\\Modulo-1\\Exercicios 1\\src\" />\r\n      <recent name=\"C:\\Users\\kamyq\\IdeaProjects\\EstruturaDeDados\\Modulo-1\\Exercicios 7\" />\r\n      <recent name=\"C:\\Users\\kamyq\\IdeaProjects\\EstruturaDeDados\\Modulo-1\" />\r\n      <recent name=\"C:\\Users\\kamyq\\IdeaProjects\\EstruturaDeDados\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150\" />\r\n        <option value=\"bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f596698c-badb-40e7-bf4a-6ff27ba1f215\" name=\"Changes\" comment=\"\" />\r\n      <created>1711656038773</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1711656038773</updated>\r\n      <workItem from=\"1711656040952\" duration=\"37000\" />\r\n      <workItem from=\"1716420691960\" duration=\"434000\" />\r\n      <workItem from=\"1716421321850\" duration=\"622000\" />\r\n      <workItem from=\"1716465081171\" duration=\"582000\" />\r\n      <workItem from=\"1716465691479\" duration=\"4212000\" />\r\n      <workItem from=\"1716516139990\" duration=\"130000\" />\r\n      <workItem from=\"1716596765182\" duration=\"68000\" />\r\n      <workItem from=\"1717523730247\" duration=\"852000\" />\r\n      <workItem from=\"1717584850357\" duration=\"206000\" />\r\n      <workItem from=\"1717585233180\" duration=\"77000\" />\r\n      <workItem from=\"1717585322516\" duration=\"196000\" />\r\n      <workItem from=\"1717585537456\" duration=\"195000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"parte do trabalho\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716465566330</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716465566330</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"trabalho 8\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717585337009</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717585337009</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"trabalho 8\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717585416699</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717585416699</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"parte do trabalho\" />\r\n    <MESSAGE value=\"trabalho 8\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"trabalho 8\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/Modulo-1/Exercicios 8/OrdenacaoSelecao.class</url>\r\n          <line>6</line>\r\n          <properties class=\"OrdenacaoSelecao\" method=\"&lt;init&gt;\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7666a123ab06095159cf41a5afce1d4626277b4b)
++++ b/.idea/workspace.xml	(date 1717962380923)
+@@ -4,9 +4,40 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="trabalho 8">
++    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="exercicios 8">
++      <change afterPath="$PROJECT_DIR$/Modulo-1/Exercicios 8/estruturadedados.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E1/E1.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E1/src/Vetor.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E10/E10.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E10/src/Recursao.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E11/E11.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E12/E12.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E12/src/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E2/E2.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E2/src/Vetor.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E3/E3.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E3/src/LDE.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E3/src/Noh.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E4/E4.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E4/src/LDE.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E4/src/Noh.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E5/E5.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E5/src/LDE.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E5/src/Noh.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E6/E6.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E6/src/LDE.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E6/src/Noh.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E7/E7.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E7/src/LDE.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E7/src/Noh.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E8/E8.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E8/src/Teste.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E9/E9.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E9/src/Teste.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/Trabalhoavaliativo2.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Modulo-1/Exercicios 1/vetorAlunos.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Modulo-1/Exercicios 6/vetorAlunos.java" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -52,15 +83,17 @@
+     &quot;Application.MainVetor.executor&quot;: &quot;Run&quot;,
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Modulo-1/Exercicios 7&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/kamyq/IdeaProjects/EstruturaDeDados&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Trabalhoavaliativo2/E12/src/Main.java&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
+@@ -101,6 +134,9 @@
+       <workItem from="1717585233180" duration="77000" />
+       <workItem from="1717585322516" duration="196000" />
+       <workItem from="1717585537456" duration="195000" />
++      <workItem from="1717586062900" duration="156000" />
++      <workItem from="1717906652177" duration="3709000" />
++      <workItem from="1717943282565" duration="1842000" />
+     </task>
+     <task id="LOCAL-00001" summary="parte do trabalho">
+       <option name="closed" value="true" />
+@@ -126,7 +162,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1717585416699</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="exercicios 8">
++      <option name="closed" value="true" />
++      <created>1717586085423</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1717586085423</updated>
++    </task>
++    <task id="LOCAL-00005" summary="exercicios 8">
++      <option name="closed" value="true" />
++      <created>1717586155840</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1717586155840</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -146,7 +198,9 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="parte do trabalho" />
+     <MESSAGE value="trabalho 8" />
+-    <option name="LAST_COMMIT_MESSAGE" value="trabalho 8" />
++    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
++    <MESSAGE value="exercicios 8" />
++    <option name="LAST_COMMIT_MESSAGE" value="exercicios 8" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -159,6 +213,31 @@
+             <option name="WATCH_EXIT" value="false" />
+           </properties>
+           <option name="timeStamp" value="1" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/Trabalhoavaliativo2/src/Main.java</url>
++          <line>11</line>
++          <option name="timeStamp" value="2" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/Trabalhoavaliativo2/E2/src/Main.java</url>
++          <line>12</line>
++          <option name="timeStamp" value="5" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/Trabalhoavaliativo2/E3/E4/src/Main.java</url>
++          <line>11</line>
++          <option name="timeStamp" value="6" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/Trabalhoavaliativo2/E9/src/Main.java</url>
++          <line>7</line>
++          <option name="timeStamp" value="12" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/Trabalhoavaliativo2/E10/src/Main.java</url>
++          <line>9</line>
++          <option name="timeStamp" value="13" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+Index: Trabalhoavaliativo2/E8/E8.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E8/E8.iml b/Trabalhoavaliativo2/E8/E8.iml
+new file mode 100644
+--- /dev/null	(date 1717906914052)
++++ b/Trabalhoavaliativo2/E8/E8.iml	(date 1717906914052)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E9/E9.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E9/E9.iml b/Trabalhoavaliativo2/E9/E9.iml
+new file mode 100644
+--- /dev/null	(date 1717906932558)
++++ b/Trabalhoavaliativo2/E9/E9.iml	(date 1717906932558)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E10/E10.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E10/E10.iml b/Trabalhoavaliativo2/E10/E10.iml
+new file mode 100644
+--- /dev/null	(date 1717906939098)
++++ b/Trabalhoavaliativo2/E10/E10.iml	(date 1717906939098)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E11/E11.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E11/E11.iml b/Trabalhoavaliativo2/E11/E11.iml
+new file mode 100644
+--- /dev/null	(date 1717906950000)
++++ b/Trabalhoavaliativo2/E11/E11.iml	(date 1717906950000)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E12/E12.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E12/E12.iml b/Trabalhoavaliativo2/E12/E12.iml
+new file mode 100644
+--- /dev/null	(date 1717906958257)
++++ b/Trabalhoavaliativo2/E12/E12.iml	(date 1717906958257)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E1/src/Vetor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E1/src/Vetor.java b/Trabalhoavaliativo2/E1/src/Vetor.java
+new file mode 100644
+--- /dev/null	(date 1717907207972)
++++ b/Trabalhoavaliativo2/E1/src/Vetor.java	(date 1717907207972)
+@@ -0,0 +1,86 @@
++import java.util.Random;
++
++public class Vetor {
++
++    Random random = new Random();
++    private int[] vetor;
++    private int total;
++
++    public Vetor(int tamanho){
++        this.vetor = new int[tamanho];
++    }
++
++
++    public Vetor(){
++        vetor = new int[10];
++    }
++
++
++    public void adiciona(int numero){
++        this.garanteEspaco();
++        this.vetor[total] = numero;
++        total++;
++    }
++
++
++    public int tamanho(){
++        return total;
++    }
++
++
++    public boolean contem(int vetor){
++        for(int i=0; i<this.total; i++){
++            if(vetor == this.vetor[i]){
++                return true;
++            }
++        }
++        return false;
++    }
++
++
++    public boolean cheio(){
++        if (total == this.vetor.length)
++            return true;
++        return false;
++    }
++
++
++    private void garanteEspaco(){
++        if (this.cheio()){
++            int[] novos = new int[this.vetor.length * 2];
++            for (int i=0; i < this.vetor.length; i++)
++                novos[i] = this.vetor[i];
++            this.vetor = novos;
++        }
++
++    }
++
++
++    public void gerandoAleatorio(){
++        for (int i = 0; i < vetor.length; i++) {
++            adiciona(random.nextInt(100));
++        }
++    }
++
++
++    public void imprime(){
++        for(int i=0; i < total; i++){
++            System.out.println(vetor[i]);
++        }
++    }
++
++
++    public String getIntersecao(Vetor vetor2){
++        String intersecao = "";
++        for(int i=0; i < total; i++){
++            for(int j=0; j < vetor2.tamanho(); j++){
++                if(vetor[i] == vetor2.vetor[j]){
++                    intersecao += vetor[i] + " ";
++                }
++            }
++        }
++        return "Em comum: " + intersecao ;
++    }
++
++
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E8/src/Teste.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E8/src/Teste.java b/Trabalhoavaliativo2/E8/src/Teste.java
+new file mode 100644
+--- /dev/null	(date 1717907407221)
++++ b/Trabalhoavaliativo2/E8/src/Teste.java	(date 1717907407221)
+@@ -0,0 +1,88 @@
++
++public class Teste {
++
++    public void bubbleSort(int[] vetor) {
++        System.out.println("==================");
++        System.out.println("   Bubble Sort:");
++        System.out.println("==================");
++        mostrarVetor(vetor);
++
++        int n = vetor.length;
++        boolean trocou;
++
++        for (int i = 0; i < n - 1; i++) {
++            trocou = false;
++
++            for (int j = 0; j < n - i - 1; j++) {
++                if (vetor[j] > vetor[j + 1]) {
++                    troca(vetor, j, j + 1);
++                    trocou = true;
++                    mostrarVetor(vetor);
++                }
++            }
++
++            if (!trocou) {
++                break;
++            }
++        }
++    }
++
++    public void selectionSort(int[] vetor) {
++        System.out.println("==================");
++        System.out.println("  Selection Sort:");
++        System.out.println("==================");
++        mostrarVetor(vetor);
++
++        int n = vetor.length;
++
++        for (int i = 0; i < n - 1; i++) {
++            int indiceMenor = i;
++
++            for (int j = i + 1; j < n; j++) {
++                if (vetor[j] < vetor[indiceMenor]) {
++                    indiceMenor = j;
++                }
++            }
++
++            if (indiceMenor != i) {
++                troca(vetor, i, indiceMenor);
++                mostrarVetor(vetor);
++            }
++        }
++    }
++
++    public void insertionSort(int[] vetor) {
++        System.out.println("==================");
++        System.out.println("  Insertion Sort:");
++        System.out.println("==================");
++        mostrarVetor(vetor);
++
++        int n = vetor.length;
++
++        for (int i = 1; i < n; i++) {
++            int chave = vetor[i];
++            int j = i - 1;
++
++            while (j >= 0 && vetor[j] > chave) {
++                vetor[j + 1] = vetor[j];
++                j--;
++            }
++
++            vetor[j + 1] = chave;
++            mostrarVetor(vetor);
++        }
++    }
++
++    public static void troca(int[] vetor, int i, int j) {
++        int temp = vetor[i];
++        vetor[i] = vetor[j];
++        vetor[j] = temp;
++    }
++
++    public void mostrarVetor(int[] vetor) {
++        for (int num : vetor) {
++            System.out.print(num + " ");
++        }
++        System.out.println();
++    }
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/Trabalhoavaliativo2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/Trabalhoavaliativo2.iml b/Trabalhoavaliativo2/Trabalhoavaliativo2.iml
+new file mode 100644
+--- /dev/null	(date 1717906675556)
++++ b/Trabalhoavaliativo2/Trabalhoavaliativo2.iml	(date 1717906675556)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E9/src/Teste.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E9/src/Teste.java b/Trabalhoavaliativo2/E9/src/Teste.java
+new file mode 100644
+--- /dev/null	(date 1717907600118)
++++ b/Trabalhoavaliativo2/E9/src/Teste.java	(date 1717907600118)
+@@ -0,0 +1,40 @@
++public class Teste {
++    public void bubbleSort(int[] vetor) {
++        System.out.println(".....................");
++        System.out.println("   Bubble Sort:");
++        System.out.println(".....................");
++        mostrarVetor(vetor);
++
++        int n = vetor.length;
++        boolean trocou;
++
++        for (int i = 0; i < n - 1; i++) {
++            trocou = false;
++
++            for (int j = 0; j < n - i - 1; j++) {
++                if (vetor[j] > vetor[j + 1]) {
++                    troca(vetor, j, j + 1);
++                    trocou = true;
++                    mostrarVetor(vetor);
++                }
++            }
++
++            if (!trocou) {
++                break;
++            }
++        }
++    }
++
++    public static void troca(int[] vetor, int i, int j) {
++        int temp = vetor[i];
++        vetor[i] = vetor[j];
++        vetor[j] = temp;
++    }
++
++    public void mostrarVetor(int[] vetor) {
++        for (int num : vetor) {
++            System.out.print(num + " ");
++        }
++        System.out.println();
++    }
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E1/E1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E1/E1.iml b/Trabalhoavaliativo2/E1/E1.iml
+new file mode 100644
+--- /dev/null	(date 1717906792996)
++++ b/Trabalhoavaliativo2/E1/E1.iml	(date 1717906792996)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E10/src/Recursao.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E10/src/Recursao.java b/Trabalhoavaliativo2/E10/src/Recursao.java
+new file mode 100644
+--- /dev/null	(date 1717907733182)
++++ b/Trabalhoavaliativo2/E10/src/Recursao.java	(date 1717907733182)
+@@ -0,0 +1,14 @@
++public class Recursao {
++    public int soma(int numero) {
++        if (numero == 1) {
++            return 1;
++        } else {
++            return numero + soma(numero - 1);
++        }
++    }
++
++    public void mostrarSoma(int numero) {
++        int resultadoSoma = soma(numero);
++        System.out.println("A soma dos números de 1 até " + numero + " é: " + resultadoSoma);
++    }
++}
+\ No newline at end of file
+Index: Trabalhoavaliativo2/E3/E3.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Trabalhoavaliativo2/E3/E3.iml b/Trabalhoavaliativo2/E3/E3.iml
+new file mode 100644
+--- /dev/null	(date 1717906800250)
++++ b/Trabalhoavaliativo2/E3/E3.iml	(date 1717906800250)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/Modulo-1/Exercicios 6/vetorAlunos.java b/Modulo-1/Exercicios 6/vetorAlunos.java
+deleted file mode 100644
+diff --git a/Trabalhoavaliativo2/E12/src/Main.java b/Trabalhoavaliativo2/E12/src/Main.java
+new file mode 100644
