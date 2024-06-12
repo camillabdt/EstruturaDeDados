@@ -4,40 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="exercicios 8">
-      <change afterPath="$PROJECT_DIR$/Modulo-1/Exercicios 8/estruturadedados.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E1/E1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E1/src/Vetor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E10/E10.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E10/src/Recursao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E11/E11.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E12/E12.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E12/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E2/E2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E2/src/Vetor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E3/E3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E3/src/LDE.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E3/src/Noh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E4/E4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E4/src/LDE.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E4/src/Noh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E5/E5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E5/src/LDE.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E5/src/Noh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E6/E6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E6/src/LDE.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E6/src/Noh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E7/E7.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E7/src/LDE.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E7/src/Noh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E8/E8.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E8/src/Teste.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E9/E9.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/E9/src/Teste.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/Trabalhoavaliativo2.iml" afterDir="false" />
+    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="EXERCICIO 9">
+      <change afterPath="$PROJECT_DIR$/Modulo-2/Exercicio 10/Exercicio 10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modulo-2/Exercicio 10/src/IFila.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modulo-2/Exercicio 10/src/Noh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modulo-2/exercicio 9/exercicio 9.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modulo-1/Exercicios 6/vetorAlunos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modulo-1/exercicio 9/exercicio 9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modulo-1/exercicio 9/src/FilaVet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modulo-1/exercicio 9/src/IFila.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +28,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -75,35 +52,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main8.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainOficial.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainVetor.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kamyq/IdeaProjects/EstruturaDeDados&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Trabalhoavaliativo2/E12/src/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.FilaLista.executor": "Run",
+    "Application.FilaVet.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Main8.executor": "Run",
+    "Application.MainOficial.executor": "Run",
+    "Application.MainVetor.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Exercicio 10/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-2" />
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 8" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 1\src" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 7" />
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1" />
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -136,7 +115,8 @@
       <workItem from="1717585537456" duration="195000" />
       <workItem from="1717586062900" duration="156000" />
       <workItem from="1717906652177" duration="3709000" />
-      <workItem from="1717943282565" duration="1842000" />
+      <workItem from="1717943282565" duration="2763000" />
+      <workItem from="1718225897811" duration="2587000" />
     </task>
     <task id="LOCAL-00001" summary="parte do trabalho">
       <option name="closed" value="true" />
@@ -178,7 +158,47 @@
       <option name="project" value="LOCAL" />
       <updated>1717586155840</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Trabalho Avalitativo">
+      <option name="closed" value="true" />
+      <created>1717962441644</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717962441644</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/master'">
+      <option name="closed" value="true" />
+      <created>1717962488782</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717962488782</updated>
+    </task>
+    <task id="LOCAL-00008" summary="trabalho avaliativo">
+      <option name="closed" value="true" />
+      <created>1717962534745</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717962534745</updated>
+    </task>
+    <task id="LOCAL-00009" summary="trabalho avaliativo">
+      <option name="closed" value="true" />
+      <created>1717962556453</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717962556453</updated>
+    </task>
+    <task id="LOCAL-00010" summary="EXERCICIO 9">
+      <option name="closed" value="true" />
+      <created>1718226360225</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718226360225</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,9 +218,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="parte do trabalho" />
     <MESSAGE value="trabalho 8" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="exercicios 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="exercicios 8" />
+    <MESSAGE value="Trabalho Avalitativo" />
+    <MESSAGE value="trabalho avaliativo" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
+    <MESSAGE value="EXERCICIO 9" />
+    <option name="LAST_COMMIT_MESSAGE" value="EXERCICIO 9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -220,11 +243,6 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Trabalhoavaliativo2/E2/src/Main.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Trabalhoavaliativo2/E3/E4/src/Main.java</url>
           <line>11</line>
           <option name="timeStamp" value="6" />
@@ -238,6 +256,11 @@
           <url>file://$PROJECT_DIR$/Trabalhoavaliativo2/E10/src/Main.java</url>
           <line>9</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Modulo-1/exercicio 9/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
