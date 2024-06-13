@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="EXERCICIO 9">
-      <change afterPath="$PROJECT_DIR$/Modulo-2/Exercicio 10/Exercicio 10.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modulo-2/Exercicio 10/src/IFila.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modulo-2/Exercicio 10/src/Noh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modulo-2/exercicio 9/exercicio 9.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modulo-1/exercicio 9/exercicio 9.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modulo-1/exercicio 9/src/FilaVet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modulo-1/exercicio 9/src/IFila.java" beforeDir="false" />
-    </list>
+    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="EXERCICIO 10" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +106,7 @@
       <workItem from="1717586062900" duration="156000" />
       <workItem from="1717906652177" duration="3709000" />
       <workItem from="1717943282565" duration="2763000" />
-      <workItem from="1718225897811" duration="2587000" />
+      <workItem from="1718225897811" duration="3222000" />
     </task>
     <task id="LOCAL-00001" summary="parte do trabalho">
       <option name="closed" value="true" />
@@ -198,7 +188,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718226360225</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="EXERCICIO 10">
+      <option name="closed" value="true" />
+      <created>1718250134935</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718250134938</updated>
+    </task>
+    <task id="LOCAL-00012" summary="EXERCICIO 10">
+      <option name="closed" value="true" />
+      <created>1718250155244</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1718250155244</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +229,8 @@
     <MESSAGE value="trabalho avaliativo" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="EXERCICIO 9" />
-    <option name="LAST_COMMIT_MESSAGE" value="EXERCICIO 9" />
+    <MESSAGE value="EXERCICIO 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="EXERCICIO 10" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
