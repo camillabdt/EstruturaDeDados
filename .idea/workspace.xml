@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="EXERCICIO 10" />
+    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="EXERCICIO 10">
+      <change beforePath="$PROJECT_DIR$/Modulo-2/Exercicio 10/Exercicio 10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicio 10/Exercicio 10.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modulo-2/Exercicio 10/src/FilaLista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicio 10/src/FilaLista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modulo-2/Exercicio 10/src/IFila.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicio 10/src/IFila.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modulo-2/Exercicio 10/src/Noh.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicio 10/src/Noh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modulo-2/exercicio 9/src/FilaVet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicios 1/src/FilaVet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modulo-2/exercicio 9/src/IFila.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicios 1/src/IFila.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,11 +78,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-2" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1" />
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-2\exercicio 9\src" />
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-2" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 8" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 1\src" />
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 7" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -110,7 +117,7 @@
       <workItem from="1717906652177" duration="3709000" />
       <workItem from="1717943282565" duration="2763000" />
       <workItem from="1718225897811" duration="3222000" />
-      <workItem from="1718363985505" duration="115000" />
+      <workItem from="1718363985505" duration="441000" />
     </task>
     <task id="LOCAL-00001" summary="parte do trabalho">
       <option name="closed" value="true" />
@@ -216,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718364001219</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="EXERCICIO 10">
+      <option name="closed" value="true" />
+      <created>1718364108555</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718364108555</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
