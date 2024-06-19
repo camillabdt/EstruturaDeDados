@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="EXERCICIO 10">
-      <change beforePath="$PROJECT_DIR$/Modulo-2/Exercicio 10/Exercicio 10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicio 10/Exercicio 10.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modulo-2/Exercicio 10/src/FilaLista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicio 10/src/FilaLista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modulo-2/Exercicio 10/src/IFila.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicio 10/src/IFila.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modulo-2/Exercicio 10/src/Noh.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicio 10/src/Noh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modulo-2/exercicio 9/src/FilaVet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicios 1/src/FilaVet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modulo-2/exercicio 9/src/IFila.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulo-1/Exercicios 1/src/IFila.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Módulo-2/exercicio11/exercicio11.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Módulo-2/exercicio11/src/FilaLSE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Módulo-2/exercicio11/src/IPilha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Módulo-2/exercicio11/src/InverterFila.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Módulo-2/exercicio11/src/Noh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Módulo-2/exercicio11/src/PilhaLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo2/.idea/Trabalhoavaliativo2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_06_2024_16_47_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_06_2024_16_47__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +58,7 @@
   "keyToString": {
     "Application.FilaLista.executor": "Run",
     "Application.FilaVet.executor": "Run",
+    "Application.InverterFila.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Main8.executor": "Run",
     "Application.MainOficial.executor": "Run",
@@ -63,13 +69,13 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados",
+    "last_opened_file_path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Módulo-2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Exercicio 10/src/Main.java",
+    "onboarding.tips.debug.path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Módulo-2/exercicio11/src/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -78,11 +84,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Módulo-2" />
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Módulo-1" />
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-2\exercicio 9\src" />
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-2" />
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 8" />
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1\Exercicios 1\src" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -117,7 +123,8 @@
       <workItem from="1717906652177" duration="3709000" />
       <workItem from="1717943282565" duration="2763000" />
       <workItem from="1718225897811" duration="3222000" />
-      <workItem from="1718363985505" duration="441000" />
+      <workItem from="1718363985505" duration="981000" />
+      <workItem from="1718819136237" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="parte do trabalho">
       <option name="closed" value="true" />
@@ -231,7 +238,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718364108555</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="EXERCICIO 10">
+      <option name="closed" value="true" />
+      <created>1718364703015</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1718364703015</updated>
+    </task>
+    <task id="LOCAL-00016" summary="EXERCICIO 10">
+      <option name="closed" value="true" />
+      <created>1718364802861</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1718364802861</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
