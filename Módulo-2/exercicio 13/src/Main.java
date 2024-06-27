@@ -4,15 +4,7 @@ public class Main {
 
         // Inserir elementos na árvore
         arvore.recursiveAdd(59);
-        arvore.recursiveAdd(12);
-        arvore.recursiveAdd(68);
-        arvore.recursiveAdd(3);
-        arvore.recursiveAdd(58);
-        arvore.recursiveAdd(49);
         arvore.recursiveAdd(60);
-        arvore.recursiveAdd(66);
-        arvore.recursiveAdd(89);
-        arvore.recursiveAdd(80);
 
         // Buscar elemento na árvore
         Noh resultado = arvore.busca(60);
