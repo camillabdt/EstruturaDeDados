@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="EXERCICIO 13">
+    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="EXERCICIO 14">
+      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo3/Trabalhoavaliativo3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo3/src/Caixa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo3/src/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo3/src/Fila.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo3/src/Supermercado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Módulo-2/exercicio 13/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Módulo-2/exercicio 13/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +53,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.ABB.executor": "Run",
+    "Application.ArvoreAVL.executor": "Run",
     "Application.FilaLista.executor": "Run",
     "Application.FilaVet.executor": "Run",
     "Application.InverterFila.executor": "Run",
@@ -56,6 +63,7 @@
     "Application.MainOficial.executor": "Run",
     "Application.MainVetor.executor": "Run",
     "Application.MapaHashVetor.executor": "Run",
+    "Application.Supermercado.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -68,7 +76,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Módulo-2/exercicio 13/src/Main.java",
+    "onboarding.tips.debug.path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Módulo-2/exercicio 15/src/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -119,7 +127,11 @@
       <workItem from="1718363985505" duration="981000" />
       <workItem from="1718819136237" duration="2271000" />
       <workItem from="1718993609171" duration="1404000" />
-      <workItem from="1719271569225" duration="2034000" />
+      <workItem from="1719271569225" duration="2657000" />
+      <workItem from="1719441558752" duration="1159000" />
+      <workItem from="1719512691901" duration="1308000" />
+      <workItem from="1719619459179" duration="1964000" />
+      <workItem from="1719972268596" duration="288000" />
     </task>
     <task id="LOCAL-00001" summary="parte do trabalho">
       <option name="closed" value="true" />
@@ -273,7 +285,39 @@
       <option name="project" value="LOCAL" />
       <updated>1719272044638</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="EXERCICIO 13">
+      <option name="closed" value="true" />
+      <created>1719277036677</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1719277036677</updated>
+    </task>
+    <task id="LOCAL-00021" summary="EXERCICIO 13">
+      <option name="closed" value="true" />
+      <created>1719512748465</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1719512748465</updated>
+    </task>
+    <task id="LOCAL-00022" summary="EXERCICIO 14">
+      <option name="closed" value="true" />
+      <created>1719512779058</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1719512779058</updated>
+    </task>
+    <task id="LOCAL-00023" summary="EXERCICIO 14">
+      <option name="closed" value="true" />
+      <created>1719513419316</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1719513419316</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,9 +344,10 @@
     <MESSAGE value="EXERCICIO 9" />
     <MESSAGE value="EXERCICIO 10" />
     <MESSAGE value="EXERCICIO 11" />
-    <MESSAGE value="EXERCICIO 13" />
     <MESSAGE value="EXERCICIO 12" />
-    <option name="LAST_COMMIT_MESSAGE" value="EXERCICIO 12" />
+    <MESSAGE value="EXERCICIO 13" />
+    <MESSAGE value="EXERCICIO 14" />
+    <option name="LAST_COMMIT_MESSAGE" value="EXERCICIO 14" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -340,6 +385,11 @@
           <url>file://$PROJECT_DIR$/Modulo-1/exercicio 9/src/Main.java</url>
           <line>11</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Módulo-2/untitled/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
