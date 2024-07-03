@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="EXERCICIO 14">
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo3/Trabalhoavaliativo3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo3/src/Caixa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo3/src/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo3/src/Fila.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo3/src/Supermercado.java" afterDir="false" />
+    <list default="true" id="f596698c-badb-40e7-bf4a-6ff27ba1f215" name="Changes" comment="EXERCICIO 15">
+      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo4/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trabalhoavaliativo4/src/Veiculo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Módulo-2/untitled/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Módulo-2/untitled/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Trabalhoavaliativo4/Trabalhoavaliativo4.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,50 +45,53 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2eKb64h7fKliQVe0v1oPOSSmnX3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.ABB.executor": "Run",
-    "Application.ArvoreAVL.executor": "Run",
-    "Application.FilaLista.executor": "Run",
-    "Application.FilaVet.executor": "Run",
-    "Application.InverterFila.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Main8.executor": "Run",
-    "Application.MainOficial.executor": "Run",
-    "Application.MainVetor.executor": "Run",
-    "Application.MapaHashVetor.executor": "Run",
-    "Application.Supermercado.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Módulo-2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Módulo-2/exercicio 15/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.ABB.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArvoreAVL.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FilaLista.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FilaVet.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InverterFila.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main8.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainOficial.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainVetor.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MapaHashVetor.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Supermercado.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kamyq/IdeaProjects/EstruturaDeDados&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/kamyq/IdeaProjects/EstruturaDeDados/Trabalhoavaliativo4/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Trabalhoavaliativo4\src" />
+      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Trabalhoavaliativo4" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Módulo-2" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Módulo-1" />
       <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados" />
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-1" />
-      <recent name="C:\Users\kamyq\IdeaProjects\EstruturaDeDados\Modulo-2\exercicio 9\src" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -131,7 +133,9 @@
       <workItem from="1719441558752" duration="1159000" />
       <workItem from="1719512691901" duration="1308000" />
       <workItem from="1719619459179" duration="1964000" />
-      <workItem from="1719972268596" duration="288000" />
+      <workItem from="1719972268596" duration="772000" />
+      <workItem from="1720464594964" duration="308000" />
+      <workItem from="1720465046192" duration="5503000" />
     </task>
     <task id="LOCAL-00001" summary="parte do trabalho">
       <option name="closed" value="true" />
@@ -317,7 +321,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719513419316</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="EXERCICIO 15">
+      <option name="closed" value="true" />
+      <created>1719972693552</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1719972693552</updated>
+    </task>
+    <task id="LOCAL-00025" summary="EXERCICIO 15">
+      <option name="closed" value="true" />
+      <created>1719972715897</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1719972715897</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +367,8 @@
     <MESSAGE value="EXERCICIO 12" />
     <MESSAGE value="EXERCICIO 13" />
     <MESSAGE value="EXERCICIO 14" />
-    <option name="LAST_COMMIT_MESSAGE" value="EXERCICIO 14" />
+    <MESSAGE value="EXERCICIO 15" />
+    <option name="LAST_COMMIT_MESSAGE" value="EXERCICIO 15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
